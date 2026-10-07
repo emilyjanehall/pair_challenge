@@ -6,4 +6,7 @@ class MusicTracker():
         return self.track_list
 
     def add_track(self, name):
-        self.track_list.append(name)
+        if isinstance(name, str):
+            self.track_list.append(name)
+        else:
+            raise TypeError("Invalid data type")
